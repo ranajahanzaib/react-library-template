@@ -34,7 +34,7 @@ File: `package.json`
 
 ```json
 {
-  "name": "react-library-template",
+  "name": "react-library-x",
   "author": "your-username",
   "version": "1.0.0"
 }
