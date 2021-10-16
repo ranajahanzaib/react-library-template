@@ -1,10 +1,63 @@
 {
-  "name": "unique-npm-pkg",
-  "version": "1.0.0",
-  "private": false,
+  "name": "react-library-x",
+  "version": "0.0.1",
+  "description": "An open-source ReactJS component library for creating beautiful and responsive user interfaces",
+  "author": "ranajahanzaib",
   "license": "MIT",
-  "authors": "ranajahanzaib",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "library"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
-    "lib"
-  ]
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranajahanzaib/react-library-template.git"
+  },
+  "private": false,
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
+  }
 }

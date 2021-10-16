@@ -1,8 +1,8 @@
-# NPM Package Template
+# React Library Template
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
-Create NPM Packages instantly with this open-source template repo.
+Instantly create React Component Library with this open-source template repo.
 
 # Get Started
 
@@ -13,8 +13,9 @@ To use this repo template properly, _please make sure you update the following f
   AUTHORS
   MAINTAINERS
 
-  lib/
-    index.js    // Your NPM Package Code
+  src/
+    lib/
+      components/        // Your React Components here
 ```
 
 ### **Step 1** - Login to NPM
@@ -33,17 +34,23 @@ File: `package.json`
 
 ```json
 {
-  "name": "unique-pkg-name",
-  "author": "ranajahanzaib",
+  "name": "react-library-template",
+  "author": "your-username",
   "version": "1.0.0"
 }
 ```
 
 **Tip:** _[Do a Quick Search](https://www.npmjs.com/search?q=isMyUniquePkgNameAvailable) to find a package name that's unique and available._
 
-### **Step 3** - Deploy
+### **Step 3** - Build & Deploy
 
-Once, you have made the required changes, you can deploy your package to [NPM Registry](https://www.npmjs.com/) by running the following command in CLI.
+Use the following command to build your components into `dist` folder, that is automatically created in build process.
+
+```shell
+npm run build
+```
+
+Once, you're done building, you can deploy your package to [NPM Registry](https://www.npmjs.com/) by running the following command in CLI.
 
 ```shell
 npm publish
@@ -65,19 +72,38 @@ And run the following command in CLI to publish an update for your NPM package.
 npm publish
 ```
 
-### **Step 5** - Install & Use the new NPM Package.
+### **Step 5** - Install new Component Library.
 
-Once, the package is published, you can run the following command in CLI to install the package to any Nodejs project:
+Once, the package is published, you can run the following command in CLI to install the package to any React project:
 
 ```shell
-npm i npm-pkg
+npm i react-library-x
 
  - OR -
 
-yarn add npm-pkg
+yarn add react-library-x
 ```
 
-Replace `npm-pkg` with the name of your NPM package.
+Replace `react-library-x` with the name of your NPM package.
+
+### **Step 6** - Use the new Component Library.
+
+Once, you have installed the new React component library, you can use it in your project by importing it in your `App.js` or any `.js` / `.jsx` files.
+
+```diff
++ import { Box } from "react-library-x";
+import "./App.css";
+
+function App() {
+  return (
+    <div className="App">
++      <Box>A Component from my new React Library</Box>
+    </div>
+  );
+}
+
+export default App;
+```
 
 # Contributing
 
